@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MixHarbour – Support (DE/EN)</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #111214; --fg: #e8e8ea; --muted: #9a9a9f; --accent: #3a3a3f; --pill: #1c1d20; --pill-active: #e8e8ea; --pill-active-fg: #111214; --link: #d4b15c;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f3ec; --fg: #1a1a1a; --muted: #5d5a53; --accent: #d6d0c2; --pill: #ebe6da; --pill-active: #1a1a1a; --pill-active-fg: #f6f3ec; --link: #86650f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2.5rem 1.25rem 4rem; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; line-height: 1.55; }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  .updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.75rem; }
+  .langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--accent); padding-bottom: 1.25rem; }
+  .lang-btn { background: var(--pill); color: var(--fg); border: none; border-radius: 999px; padding: 0.45rem 1.1rem; font-size: 0.9rem; cursor: pointer; }
+  .lang-btn.active { background: var(--pill-active); color: var(--pill-active-fg); font-weight: 600; }
+  nav.pages { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; }
+  a { color: var(--link); }
+  section.doc { display: none; }
+  section.doc.active { display: block; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+  p { margin: 0 0 1rem; }
+  address { font-style: normal; margin: 0 0 1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="langs">
+    <button class="lang-btn active" data-lang="de" onclick="showLang('de')">Deutsch</button>
+    <button class="lang-btn" data-lang="en" onclick="showLang('en')">English (UK)</button>
+  </div>
+  <nav class="pages"><a href="index.html">Datenschutz · Privacy</a><a href="terms.html">Nutzungsbedingungen · Terms</a><a href="support.html">Support</a></nav>
+
+  <section class="doc active" id="doc-de">
+    <h1>Support – MixHarbour</h1>
+    <p class="updated">Stand: 30.10.2026</p>
+
+    <h2>Erste Schritte</h2>
+    <p>Öffnen Sie in der App die Bibliothek und wählen Sie den Ordner mit Ihren Mixen. MixHarbour liest ihn nur; es kopiert, verschiebt oder ändert nie eine Datei. Neue Dateien erscheinen nach „Neu einlesen“ in den Einstellungen.</p>
+
+    <h2>Welche Formate werden abgespielt?</h2>
+    <p>MP3, WAV, M4A, AIFF, FLAC und weitere gängige Formate, die iOS abspielen kann. Kopiergeschützte (DRM-)Dateien werden nicht unterstützt.</p>
+
+    <h2>Verändert die Lautstärke-Angleichung den Klang?</h2>
+    <p>Nein. Jeder Titel wird einmal gemessen (Lautheit nach ITU-R BS.1770). Beim Abspielen wird nur der Pegel mit einem exakten Faktor angepasst, ohne Limiter, Kompression oder Klangfilter. Angehoben wird nur, soweit die Spitzen unter −1 dBFS bleiben; Absenken geht immer. Sie können die Funktion in den Einstellungen ausschalten.</p>
+
+    <h2>Ein Titel startet nicht oder lädt lange</h2>
+    <p>Liegt Ihr Ordner in iCloud Drive, lädt iOS Dateien erst beim Abspielen herunter. Bei langen Mixen kann das dauern; prüfen Sie Ihre Verbindung. Noch nicht geladene Titel sind in der Liste markiert.</p>
+
+    <h2>Dateien wurden verschoben oder umbenannt</h2>
+    <p>Playlists speichern Verweise. Verschobene Dateien findet die App meist selbst wieder. Fehlt eine Datei, bleibt der Eintrag sichtbar und lässt sich über „Neu verknüpfen“ zuordnen.</p>
+
+    <h2>Meine Daten</h2>
+    <p>Playlists, Favoriten, Hördaten und Messwerte liegen nur auf Ihrem Gerät. Hördaten und Messwerte löschen Sie in den Einstellungen. Details stehen in der <a href="index.html">Datenschutzerklärung</a>.</p>
+
+    <h2>Sprache</h2>
+    <p>MixHarbour folgt der Sprache von iOS (Deutsch oder Englisch). Ändern können Sie sie in den iOS-Einstellungen unter MixHarbour.</p>
+
+    <h2>Kontakt</h2>
+    <address>
+      Torque Soul Media<br>
+      E-Mail: <a href="mailto:torquesoul@icloud.com">torquesoul@icloud.com</a>
+    </address>
+    <p>Bitte nennen Sie Ihr iPhone-Modell, die iOS-Version und die MixHarbour-Version (Einstellungen → Über).</p>
+  </section>
+
+  <section class="doc" id="doc-en">
+    <h1>Support – MixHarbour</h1>
+    <p class="updated">Effective: 30 October 2026</p>
+
+    <h2>Getting started</h2>
+    <p>Open the Library in the app and choose the folder with your mixes. MixHarbour only reads it; it never copies, moves or changes a file. New files appear after “Rescan” in Settings.</p>
+
+    <h2>Which formats can be played?</h2>
+    <p>MP3, WAV, M4A, AIFF, FLAC and other common formats that iOS can play. Copy-protected (DRM) files are not supported.</p>
+
+    <h2>Does volume matching change the sound?</h2>
+    <p>No. Each track is measured once (loudness according to ITU-R BS.1770). During playback only the level is adjusted, with an exact factor and without a limiter, compression or sound filter. A track is only raised as far as its peaks stay below −1 dBFS; lowering is always possible. You can switch the feature off in Settings.</p>
+
+    <h2>A track won’t start or takes a long time to load</h2>
+    <p>If your folder is in iCloud Drive, iOS downloads files only when you play them. This can take a while for long mixes; check your connection. Tracks that haven’t been downloaded yet are marked in the list.</p>
+
+    <h2>Files were moved or renamed</h2>
+    <p>Playlists store references. The app usually finds moved files again by itself. If a file is missing, the entry stays visible and can be assigned again with “Relink”.</p>
+
+    <h2>My data</h2>
+    <p>Playlists, favourites, listening data and measurements are stored only on your device. You can delete listening data and measurements in Settings. Details are in the <a href="index.html">Privacy Policy</a>.</p>
+
+    <h2>Language</h2>
+    <p>MixHarbour follows the language of iOS (German or English). You can change it in iOS Settings under MixHarbour.</p>
+
+    <h2>Contact</h2>
+    <address>
+      Torque Soul Media<br>
+      Email: <a href="mailto:torquesoul@icloud.com">torquesoul@icloud.com</a>
+    </address>
+    <p>Please include your iPhone model, the iOS version and the MixHarbour version (Settings → About).</p>
+  </section>
+
+</div>
+
+<script>
+  function showLang(lang) {
+    document.querySelectorAll('section.doc').forEach(function (el) { el.classList.remove('active'); });
+    document.getElementById('doc-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(function (btn) { btn.classList.toggle('active', btn.dataset.lang === lang); });
+    document.documentElement.lang = lang === 'en' ? 'en-GB' : lang;
+    try { localStorage.setItem('mh-lang', lang); } catch (e) {}
+  }
+  (function () {
+    var saved = null; try { saved = localStorage.getItem('mh-lang'); } catch (e) {}
+    var q = (location.search.match(/lang=(de|en)/) || [])[1];
+    var pref = q || saved || ((navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en');
+    showLang(pref);
+  })();
+</script>
+</body>
+</html>
