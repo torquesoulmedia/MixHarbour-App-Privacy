@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MixHarbour – Impressum (DE/EN)</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #111214; --fg: #e8e8ea; --muted: #9a9a9f; --accent: #3a3a3f; --pill: #1c1d20; --pill-active: #e8e8ea; --pill-active-fg: #111214; --link: #d4b15c;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f3ec; --fg: #1a1a1a; --muted: #5d5a53; --accent: #d6d0c2; --pill: #ebe6da; --pill-active: #1a1a1a; --pill-active-fg: #f6f3ec; --link: #86650f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2.5rem 1.25rem 4rem; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; line-height: 1.55; }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+  .updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.75rem; }
+  .langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--accent); padding-bottom: 1.25rem; }
+  .lang-btn { background: var(--pill); color: var(--fg); border: none; border-radius: 999px; padding: 0.45rem 1.1rem; font-size: 0.9rem; cursor: pointer; }
+  .lang-btn.active { background: var(--pill-active); color: var(--pill-active-fg); font-weight: 600; }
+  nav.pages { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; font-size: 0.9rem; }
+  a { color: var(--link); }
+  section.doc { display: none; }
+  section.doc.active { display: block; }
+  h2 { font-size: 1.05rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+  p { margin: 0 0 1rem; }
+  address { font-style: normal; margin: 0 0 1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="langs">
+    <button class="lang-btn active" data-lang="de" onclick="showLang('de')">Deutsch</button>
+    <button class="lang-btn" data-lang="en" onclick="showLang('en')">English (UK)</button>
+  </div>
+  <nav class="pages"><a href="index.html">Datenschutz · Privacy</a><a href="terms.html">Nutzungsbedingungen · Terms</a><a href="support.html">Support</a><a href="impressum.html">Impressum · Legal Notice</a></nav>
+
+  <section class="doc active" id="doc-de">
+    <h1>Impressum</h1>
+    <p class="updated">Angaben gemäß § 5 DDG · Stand: 31.10.2026</p>
+
+    <address>
+      Torque Soul Media<br>
+      Inhaber: Steffen Adamczyk<br>
+      Bergstrasse 19<br>
+      35614 Asslar, Deutschland
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>E-Mail: <a href="mailto:torquesoul@icloud.com">torquesoul@icloud.com</a></p>
+
+    <h2>Verantwortlich für den Inhalt</h2>
+    <p>Steffen Adamczyk, Anschrift wie oben.</p>
+  </section>
+
+  <section class="doc" id="doc-en">
+    <h1>Legal Notice</h1>
+    <p class="updated">Information pursuant to Section 5 of the German Digital Services Act (DDG) · Updated: 31 October 2026</p>
+
+    <address>
+      Torque Soul Media<br>
+      Owner: Steffen Adamczyk<br>
+      Bergstrasse 19<br>
+      35614 Asslar, Germany
+    </address>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:torquesoul@icloud.com">torquesoul@icloud.com</a></p>
+
+    <h2>Responsible for content</h2>
+    <p>Steffen Adamczyk, address as above.</p>
+  </section>
+
+</div>
+
+<script>
+  function showLang(lang) {
+    document.querySelectorAll('section.doc').forEach(function (el) { el.classList.remove('active'); });
+    document.getElementById('doc-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(function (btn) { btn.classList.toggle('active', btn.dataset.lang === lang); });
+    document.documentElement.lang = lang === 'en' ? 'en-GB' : lang;
+    try { localStorage.setItem('mh-lang', lang); } catch (e) {}
+  }
+  (function () {
+    var saved = null; try { saved = localStorage.getItem('mh-lang'); } catch (e) {}
+    var q = (location.search.match(/lang=(de|en)/) || [])[1];
+    var pref = q || saved || ((navigator.language || 'en').toLowerCase().indexOf('de') === 0 ? 'de' : 'en');
+    showLang(pref);
+  })();
+</script>
+</body>
+</html>
